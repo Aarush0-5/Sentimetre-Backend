@@ -13,7 +13,7 @@ export const podcastget = async (req,res)=>{
 
 export const podcastpost = async (req, res) => {
      const { title, urly, urls, urla, description ,bg} = req.body;
-      if (!title || !urly || !urls || urla || !description || !bg) {
+      if (!title || !urly || !urls || !urla || !description || !bg) {
         return res.status(400).json({ message: 'Please add all the details' });
       }
         const newPodcast = new Podcast({
