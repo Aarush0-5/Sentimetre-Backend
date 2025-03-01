@@ -12,15 +12,17 @@ export const podcastget = async (req,res)=>{
 }
 
 export const podcastpost = async (req, res) => {
-     const { ptitle, purl, pdescription ,pbg} = req.body;
-      if (!ptitle || !purl || !pdescription || !pbg) {
+     const { title, urly, urls, urla, description ,bg} = req.body;
+      if (!title || !urly || !urls || urla|| !description || !bg) {
         return res.status(400).json({ message: 'Please add all the details' });
       }
         const newPodcast = new Podcast({
-          ptitle,
-          pdescription,
-          purl,
-          pbg,
+          title,
+          description,
+          urly,
+          urls,
+          urla,
+          bg,
         });
   
         try {
