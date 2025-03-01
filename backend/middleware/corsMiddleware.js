@@ -2,7 +2,7 @@
 import cors from "cors";
 
 const corsOptions = {
-    origin: "http://localhost:5173", // Allow all origins. Change this to specific domains if needed.
+    origin: "https://www.sentimetre.live",
     methods: ['GET', 'POST', 'PUT', 'DELETE'], 
     allowedHeaders: ['Content-Type', 'Authorization'], 
     credentials:true,
